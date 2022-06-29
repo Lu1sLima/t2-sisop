@@ -1,0 +1,53 @@
+{
+  "typee": "fixed",
+  "capacity": 16,
+  "partitions": 4,
+  "alg": "",
+  "processes": [
+    {
+      "event": "IN",
+      "pid": "Z",
+      "psize": 5
+    },
+    {
+      "event": "IN",
+      "pid": "A",
+      "psize": 3
+    },
+    {
+      "event": "IN",
+      "pid": "B",
+      "psize": 2
+    },
+    {
+      "event": "IN",
+      "pid": "C",
+      "psize": 1
+    },
+    {
+      "event": "OUT",
+      "pid": "B",
+      "psize": -1
+    },
+    {
+      "event": "IN",
+      "pid": "D",
+      "psize": 4
+    },
+    {
+      "event": "OUT",
+      "pid": "A",
+      "psize": -1
+    },
+    {
+      "event": "OUT",
+      "pid": "C",
+      "psize": -1
+    },
+    {
+      "event": "OUT",
+      "pid": "D",
+      "psize": -1
+    }
+  ]
+}
