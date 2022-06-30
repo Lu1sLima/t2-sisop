@@ -49,28 +49,28 @@
 ---
 ### **A saída (resultado)**
 ```bash
-PROCESS ID: A
-PROCESS SIZE: 3
-PROCESS EVENT: IN
-   +---------+
-1  |         | <--- Searching...
-2  |         |
-3  |         |
-4  |         |
-5  |         |
-6  |         |
-7  |         |
-8  |         |
-9  |         |
-10 |         |
-11 |         |
-12 |         |
-13 |         |
-14 |         |
-15 |         |
-16 |         |
-   +---------+
->>
+                                      PROCESS ID: A
+                                      PROCESS SIZE: 3
+                                      PROCESS EVENT: IN
+                                         +---------+
+                                      1  |         | <--- Searching...
+                                      2  |         |
+                                      3  |         |
+                                      4  |         |
+                                      5  |         |
+                                      6  |         |
+                                      7  |         |
+                                      8  |         |
+                                      9  |         |
+                                      10 |         |
+                                      11 |         |
+                                      12 |         |
+                                      13 |         |
+                                      14 |         |
+                                      15 |         |
+                                      16 |         |
+                                         +---------+
+                                      >>
 ```
 - Durante a execução é mostrado qual processo está sendo executado, seu tamanho, e o evento (entrada ou saída).
 - Além dissom, uma pilha de memória é simulada (exemplo acima).
