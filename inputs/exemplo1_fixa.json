@@ -6,11 +6,6 @@
   "processes": [
     {
       "event": "IN",
-      "pid": "Z",
-      "psize": 5
-    },
-    {
-      "event": "IN",
       "pid": "A",
       "psize": 3
     },
@@ -26,8 +21,7 @@
     },
     {
       "event": "OUT",
-      "pid": "B",
-      "psize": -1
+      "pid": "B"
     },
     {
       "event": "IN",
@@ -36,18 +30,15 @@
     },
     {
       "event": "OUT",
-      "pid": "A",
-      "psize": -1
+      "pid": "A"
     },
     {
       "event": "OUT",
-      "pid": "C",
-      "psize": -1
+      "pid": "C"
     },
     {
       "event": "OUT",
-      "pid": "D",
-      "psize": -1
+      "pid": "D"
     }
   ]
 }

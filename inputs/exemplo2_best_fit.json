@@ -1,0 +1,45 @@
+{
+    "typee": "variable",
+    "capacity": 16,
+    "partitions": 4,
+    "alg": "best-fit",
+    "processes": [
+      {
+        "event": "IN",
+        "pid": "A",
+        "psize": 3
+      },
+      {
+        "event": "IN",
+        "pid": "B",
+        "psize": 2
+      },
+      {
+        "event": "IN",
+        "pid": "C",
+        "psize": 1
+      },
+      {
+        "event": "OUT",
+        "pid": "A"
+      },
+      {
+        "event": "IN",
+        "pid": "D",
+        "psize": 4
+      },
+      {
+        "event": "OUT",
+        "pid": "C"
+      },
+      {
+        "event": "OUT",
+        "pid": "B"
+      },
+      {
+        "event": "OUT",
+        "pid": "D"
+      }
+    ]
+  }
+  

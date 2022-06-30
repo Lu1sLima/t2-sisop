@@ -4,10 +4,10 @@ import argparse
 from typing import Dict, List
 
 from fixed import Fixed
-from utils import memory_ascii
 from variable import Variable
 
 class MemoryManager:
+    """ Classe que modela o MMU """
 
     def __init__(self, processes: List[Dict], capacity: int, partitions: int, alg: str, typee: str, verbosity: bool = False):
         self.stack: List[str] = ['FREE'] * capacity
@@ -21,11 +21,16 @@ class MemoryManager:
     def run(self):
         type_mapper = {
             'fixed': Fixed(capacity=self.capacity, verbosity=self.verbosity, partitions=self.partitions),
-            'variable': Variable(alg='best-fit', capacity=self.capacity, verbosity=self.verbosity)
+            'variable': Variable(alg=self.alg, capacity=self.capacity, verbosity=self.verbosity)
             }
 
         for process in self.processes:
-            event, pid, psize = process.values()
+            if len(process.values()) < 3:
+                event, pid = process.values()
+                psize = 0
+            else:
+                event, pid, psize = process.values()
+
             if event == 'IN':
                 type_mapper[self.type].in_(pid, psize, self.stack)
             else:
@@ -35,14 +40,13 @@ class MemoryManager:
             
 
 if __name__ == "__main__":
-    # parser = argparse.ArgumentParser()
-    # parser.add_argument('file_path', type=str, help="input file path")
-    # parser.add_argument('-v', '--verbosity', action='store_true', help="show where the algorithm is searching/alocation in the memory", required=False)
-    # args = parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('file_path', type=str, help="input file path")
+    parser.add_argument('-v', '--verbosity', action='store_true', help="show where the algorithm is searching/alocation in the memory", required=False, default=True)
+    args = parser.parse_args()
 
-    filepath = 'input2.json'
 
-    with open(filepath, 'r') as file:
+    with open(args.file_path, 'r') as file:
         content = json.loads(file.read())
         mem = MemoryManager(**content, verbosity=True)
 
