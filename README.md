@@ -23,10 +23,11 @@
       - ***pid:*** ID do processo
       - ***psize:*** tamanho do processo
   - Dentro da pasta ```./inputs``` existem alguns exemplos para teste pré-criados.
+  
 ---
 ### **Informações da implementação**
 
-- O trabalho em geral explora **todas** as abordagens solicitadas no enunciado do trabalho. Entretanto, um dia antes da entrega do trabalho surgiu uma dúvida entre a dupla se deveria ser implementado a **paginação** quando um processo é maior do que uma partição (que não consta no enunciado do trabalho). Sendo assim, um e-mail foi enviado para o professor e este informou que o esperado era que fosse realizado a **paginação** dos processos neste caso, porém, visto que esta informação não constava no trabalho, o professor decidiu que irá aceitar a implementação que **não considera a paginação dos processos neste caso**. Portanto, este trabalho **não aborda a paginaçã dos processos**.
+- O trabalho em geral explora **todas** as abordagens solicitadas no enunciado do trabalho. Entretanto, um dia antes da entrega do trabalho surgiu uma dúvida entre a dupla se deveria ser implementado a **paginação** quando um processo é maior do que uma partição (que não consta no enunciado do trabalho). Sendo assim, um e-mail foi enviado para o professor e este informou que o esperado era que fosse realizado a **paginação** dos processos neste caso, porém, visto que esta informação não constava no trabalho, o professor decidiu que irá aceitar a implementação que **não considera a paginação dos processos neste caso**. Portanto, este trabalho **não aborda a paginação dos processos**.
 - O trabalho está separado em quatro classes (arquivos):
   - ```alocation.py```
   - ```fixed.py```
@@ -43,8 +44,8 @@
     python3 memory_manager.py <caminho_do_arquivo>
     python3 memory_manager.py ./inputs/exemplo1_fixa.json
 ```
-- **Durante a execução, o programa irá solicitar (quando aparecer o símbolo ```>>```) para que prossiga para o próximo passo.**
-- Quando não houver mais processos na lista de processos lidos do arquivo de entrada o progama acaba.
+- **Durante a execução, o programa irá solicitar uma interação do usuário (quando aparecer o símbolo ```>>```) para que prossiga para o próximo passo.**
+- Quando não houver mais processos na lista de processos lidos do arquivo de entrada o programa é terminado.
 
 ---
 ### **A saída (resultado)**
@@ -72,10 +73,9 @@
                                          +---------+
                                       >>
 ```
-- Durante a execução é mostrado qual processo está sendo executado, seu tamanho, e o evento (entrada ou saída).
-- Além dissom, uma pilha de memória é simulada (exemplo acima).
-- Na pilha de memória, existe um "ponteiro" que diz onde o programa está **procurando**, **alocando**, **limpando** ou **adicionando uma fragmentação interna** o espaço de memória.
+- Durante a execução é a saída informa qual processo está sendo executado, seu tamanho, e o evento (entrada ou saída).
+- Além disso, uma pilha de memória é simulada (exemplo acima).
+- Na pilha de memória, existe um "ponteiro" que diz onde o programa está **procurando**, **alocando**, **limpando** ou **adicionando uma fragmentação interna** em um espaço de memória.
 - **Na partição fixa**, as **fragmentações internas** serão abordadas com a string ```///////```.
-- Quando um processo não cabe na memória (ou por não ter espaço suficiente ou - Na saída do programa, uma pilha de memória é simulada (exempl
-), o programa irá lançar a seguinte mensagem:
+- Quando um processo não cabe na memória (ou por não ter espaço suficiente ou **por ter um tamanho maior do que a partição, quando é particionamento fixado)** e o programa irá lançar a seguinte mensagem:
     - ```INSUFFICIENT MEMORY SPACE!```
